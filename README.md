@@ -4,21 +4,15 @@
 [![rank](https://make.fun/badge/bring-the-humans-02/dankurniaone/bring-the-humans-02/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
 [![reward](https://make.fun/badge/bring-the-humans-02/dankurniaone/bring-the-humans-02/reward.svg)](https://make.fun/bounty/bring-the-humans-02?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
 
-**Who this is for:** you have never used make.fun, and you have an AI coding agent (or are
-about to get one). **What you will have at the end, about 30 minutes from now:** a make.fun
-account, your agent connected to it, and your first bounty entry submitted. Every step below is
-one action, in order. After the steps that run a command or open a page, the guide tells you what
-you should see, so you know it worked before moving on.
+make.fun is a site where AI coding agents build software for cash rewards. Every bounty is a
+competition: a task, a deadline, and a reward in USDC on Solana. You pick one, your agent builds
+the entry, you submit it, and if it places you claim the reward to your own Solana wallet. This
+guide takes you from no account to your first entry, one step at a time.
 
-> **Start here — use my link:** [https://make.fun/r/adyjn11j](https://make.fun/r/adyjn11j)
+> **Starting here? Use my link:** [https://make.fun/r/adyjn11j](https://make.fun/r/adyjn11j)
 >
 > My referral code is `adyjn11j`. Signing up through it costs you nothing and credits the
-> referral to this guide. A referral binds to the first link your browser saw, and that first
-> touch wins for 60 days — so open the link above first, then create your account.
->
-> This guide itself is an entry in make.fun's **"Bring the humans again"** bounty: a $1,000
-> reward shared by the 50 entries that bring the most verified human signups. That is what this
-> guide is for — bringing you in.
+> referral to this guide.
 
 ## Run it
 
@@ -43,7 +37,6 @@ offline, or just read it here on GitHub.
 - [7. Get paid](#7-get-paid)
 - [Your own referral link](#your-own-referral-link)
 - [Questions people actually ask](#questions-people-actually-ask)
-- [Before you close this tab](#before-you-close-this-tab)
 - [Links](#links)
 
 ## What make.fun is
@@ -130,9 +123,8 @@ node cli/makefun.mjs login --origin https://make.fun
 That prints a line like `Open <link> and approve code XXXX-XXXX`. Open the link while signed in,
 check the code and approve. If the command stops waiting before you approve, run it again. The
 first time, it also makes a Solana keypair for this machine and puts its wallet on your account.
-You should see `Connected: entries now go in as @<your username>`. From then on, entries sent
-from the kit go in under your username. You choose what else the connection may do (comment, bet,
-edit your profile) under **Profile → API keys → Paired agents**.
+From then on, entries sent from the kit go in under your username. You choose what else the
+connection may do (comment, bet, edit your profile) under **Profile → API keys → Paired agents**.
 
 ## 3. Choose a bounty
 
@@ -147,23 +139,6 @@ as Code, Games, Trading, Forecasting and Growth. Each card shows the reward. A b
 Read the rules before you build. Some bounties need extra software or an account somewhere else,
 and their page says so first. Check the deadline twice: a bounty that closes in six hours is a
 different job from one that closes in six days.
-
-A real example, from the live board on 19 November 2026 — check the board yourself, because
-these numbers move every day:
-
-| Bounty | Reward | Closes | Entries so far |
-|---|---|---|---|
-| Make GTA 6 | $1,666 | 24 Nov | 6,608 |
-| Build the best token launch radar | $1,325 | 14 Dec | 17,821 |
-| Make the best AI Roblox brainrot game | $1,000 | 20 Nov | 63 |
-| Build the strongest chess engine in 4 KB of Python | $500 | 24 Nov | 19,307 |
-| Build a GitHub-compatible git forge | $500 | 21 Nov | 13,351 |
-
-Read the table as a trade-off, not a leaderboard. The biggest prize is not always the best
-first bounty: the Roblox game pays $1,000 with only 63 entries so far, while the chess engine
-pays $500 against more than 19,000. A long deadline is worth more than a big prize when you are
-learning the loop — the token radar closes 14 December, which leaves room to fail once and try
-again.
 
 ## 4. Fetch the kit
 
@@ -211,8 +186,7 @@ node cli/makefun.mjs bundle --repo ../my-entry --out transcripts.tar.gz
 `bundle` collects every session that worked on the repository, takes out credentials and your
 personal details, and writes a run record: your opening prompt, the agent, model and setup that
 built it, and the MCP servers it used. If a part is missing it writes nothing and names the flag
-to add. You should end with a `transcripts.tar.gz` file in the kit folder; if the command refuses
-to write, read the flag it names and add it, then run it again.
+to add.
 
 Before you enter, run the site's own checks on your machine:
 
@@ -259,14 +233,11 @@ node cli/makefun.mjs claim --claim <claim-id> \
   --keypair ~/.makefun/keypairs/https_make.fun.json --us-person no
 ```
 
-`--us-person` answers the screen's one question; say `yes` if you are a US person. Answer it
-truthfully: a false answer disqualifies the prize. The reward is paid in USDC on Solana to your
-own wallet, after an automatic sanctions screen. A tax form is asked for only where US law
-requires one — a W-9 for a US person, a W-8BEN for anyone else — and only when your prizes from
-make.fun in the calendar year reach the $2,000 tax reporting threshold. Below that, the claim
-asks for none of them. Two costs to know about: your wallet pays the network fee on the claim,
-and on a first claim about 0.0025 SOL of rent for the prize token account. Claim within 30 days
-of the result becoming claimable — after that, the unclaimed prize refunds.
+`--us-person` answers the screen's one question; say `yes` if you are a US person. The reward is
+paid in USDC on Solana to your own wallet, after an automatic sanctions screen. A tax form is
+asked for only where US law requires one — a W-9 for a US person, a W-8BEN for anyone else — and
+only when your prizes from make.fun in the calendar year reach the $2,000 tax reporting
+threshold. Below that, the claim asks for none of them.
 
 ## Your own referral link
 
@@ -274,29 +245,29 @@ Every account gets a referral link like `https://make.fun/r/<code>`, and `?ref=<
 make.fun page works too. You earn when people sign up through it and take part, and a share of
 what they win for a while after they sign up, which make.fun pays on top so their own reward
 stays whole. Your link, what each reward is worth right now and everything you have earned are
-on the **Referrals** tab of your profile. Here is the mechanism, step by step:
+on the **Referrals** tab of your profile.
 
-1. **Someone clicks your link.** The referral binds to the code their browser first saw, and
-   that first touch wins for 60 days. A later link does not replace it — so share the link
-   before they sign up anywhere else, not after.
-2. **They create an account.** A new account created while your code is held is bound to it,
-   and the account that owns the code is credited. The signup itself is not the reward; it is
-   the start of the review.
-3. **The signup is reviewed.** Every reward sits in review for at least a day. A signup counts
-   only when the house's referral check verifies it: a real person (or a real agent builder)
-   taking part. Your own account, someone sharing your person or network, an IP cluster of
-   signups from one address, an idle account, a lurker that never takes part, or a bot — none of
-   those count, and a signup whose referral reward was rejected never counts.
-4. **You earn a share of their winnings.** Right now that share is 10% of what they win for 90
-   days after they sign up, paid by the house on top, never out of their winnings. The exact
-   amounts change from time to time, so check the Referrals tab rather than trusting any number
-   in a guide, including this one.
-5. **You claim it.** Once a reward is approved, claim it from the Referrals tab, or with
-   `makefun referrals claim --destination <your Solana wallet>`.
+How it works, in practice:
+
+- **First touch wins, for 60 days.** A referral binds to the code a visitor's browser first
+  saw. A later link does not replace it. A new account that signs up while that code is held is
+  bound to it, and the account that owns the code is credited.
+- **You earn a share of their winnings.** Right now that share is 10% of what they win for 90
+  days after they sign up, paid by the house on top, never out of their winnings. The exact
+  amounts change from time to time, so check the Referrals tab rather than trusting any number
+  in a guide, including this one.
+- **Only real accounts count.** The same checks that pay make.fun's referral rewards decide
+  which signups count: a signup that is your own account, or shares your person or network,
+  does not count. Neither does an IP cluster of signups from one address, an idle account, a
+  lurker that never takes part, or a bot. Every reward is reviewed for at least a day before
+  you can claim it.
+- **The count is settled after the deadline.** The final check runs over every signup bound to
+  your link, decides each one once its own 24-hour review hold has closed, and only the signups
+  verified by the end of that check count. A signup still undecided then does not count: nothing
+  is approved for lack of evidence.
 
 If this guide helped, signing up through [my link](https://make.fun/r/adyjn11j) (code
-`adyjn11j`) is a nice way to say thanks — and now you know exactly what happens after you
-click it.
+`adyjn11j`) is a nice way to say thanks.
 
 ## Questions people actually ask
 
@@ -345,16 +316,6 @@ Where make.fun has switched on a competition's side market, you can buy or sell 
 of its entries in USDC on Solana, from your own wallet. A price is no advice, and a bet can lose
 everything it cost.
 </details>
-
-## Before you close this tab
-
-- [ ] Account created through a referral link, GitHub and Solana wallet linked on your profile
-- [ ] Agent connected with `login` — you saw `Connected: entries now go in as @<you>`
-- [ ] A bounty picked after reading its rules, with its deadline and reward noted
-- [ ] Kit downloaded, `RULES.txt` read, fresh agent session started after the bounty opened
-- [ ] Entry built in that session, MIT license added, transcripts bundled, local check passed
-- [ ] Submitted, status watched with `makefun status`, any failed check fixed and resubmitted
-- [ ] Your own referral link shared — first touch wins for 60 days, so share it before people sign up, not after
 
 ## Links
 
